@@ -15,4 +15,26 @@
 		<version>2.0.0</version>
 	</parent>
 	
+	<dependencies>
+	
+		<dependency>
+			<groupId>net.bbmsoft</groupId>
+			<artifactId>virtual-keyboard</artifactId>
+			<version>1.0.0</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>net.bbmsoft</groupId>
+			<artifactId>fxtended</artifactId>
+			<version>1.2.1</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>net.bbmsoft</groupId>
+			<artifactId>fxtended-extensions</artifactId>
+			<version>2.0.0</version>
+		</dependency>
+		
+	</dependencies>
+	
 </project>
