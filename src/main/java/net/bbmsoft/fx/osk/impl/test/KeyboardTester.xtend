@@ -53,7 +53,7 @@ class KeyboardTester extends BorderPane {
 
 	def initBoard() {
 
-		if (boardLayout != null && keyLayout != null) {
+		if (boardLayout !== null && keyLayout !== null) {
 
 			try {
 

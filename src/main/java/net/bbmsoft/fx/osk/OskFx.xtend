@@ -133,7 +133,7 @@ class OskFx extends GridPane implements VirtualKeyboard, NodeAttachableVirtualKe
 
 	override setIndicatorText(String value) {
 		Platform.runLater [
-			if (this.inputIndicator != null) {
+			if (this.inputIndicator !== null) {
 
 				this.inputIndicator.textProperty.removeListener(this.localTextListener)
 				this.inputIndicator.selectionProperty.removeListener(this.localSelectionListener)
@@ -177,7 +177,7 @@ class OskFx extends GridPane implements VirtualKeyboard, NodeAttachableVirtualKe
 	// IMPLEMENTATION
 	private def bindInputIndicator() {
 
-		if (inputIndicator == null) {
+		if (inputIndicator === null) {
 			return
 		}
 

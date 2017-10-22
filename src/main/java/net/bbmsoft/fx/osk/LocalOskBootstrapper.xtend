@@ -35,9 +35,9 @@ class LocalOskBootstrapper {
 
 		val keyLoader = new FXMLLoader(keyLayout);
 
-		if (resourceBundleBaseName != null) {
+		if (resourceBundleBaseName !== null) {
 
-			if (bundleClassLoader != null) {
+			if (bundleClassLoader !== null) {
 				keyLoader.resources = ResourceBundle.getBundle(resourceBundleBaseName, locale, bundleClassLoader)
 			} else {
 				keyLoader.resources = ResourceBundle.getBundle(resourceBundleBaseName, locale)

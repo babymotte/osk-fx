@@ -36,7 +36,7 @@ class OskFxNodeConnectorImpl implements VirtualKeyboardIOHandler.Listener, OskFx
 
 		this.keyboard = keyboard
 
-		if (this.keyboard != null) {
+		if (this.keyboard !== null) {
 			this.targetTextListener = [this.keyboard.setIndicatorText($2)]
 			this.targetSelectionListener = [this.keyboard.setIndicatorSelection($2.start, $2.end)]
 		} else {
@@ -52,13 +52,13 @@ class OskFxNodeConnectorImpl implements VirtualKeyboardIOHandler.Listener, OskFx
 	override keyPressed(KeyCode keyCode, int[] makeCode, boolean shiftDown, boolean ctrlDown, boolean altDown,
 		boolean altGraphDown, boolean osDown, boolean typematic) {
 
-		if (this.targetNode == null) {
+		if (this.targetNode === null) {
 			return
 		}
 
 		val jfxCode = keyCode.toJfxKeyCode
 
-		if (jfxCode == null) {
+		if (jfxCode === null) {
 			return
 		}
 
@@ -70,13 +70,13 @@ class OskFxNodeConnectorImpl implements VirtualKeyboardIOHandler.Listener, OskFx
 	override keyReleased(KeyCode keyCode, int[] breakCode, boolean shiftDown, boolean ctrlDown, boolean altDown,
 		boolean altGraphDown, boolean osDown) {
 
-		if (this.targetNode == null) {
+		if (this.targetNode === null) {
 			return
 		}
 
 		val jfxCode = keyCode.toJfxKeyCode
 
-		if (jfxCode == null) {
+		if (jfxCode === null) {
 			return
 		}
 
@@ -89,13 +89,13 @@ class OskFxNodeConnectorImpl implements VirtualKeyboardIOHandler.Listener, OskFx
 	override keyTyped(KeyCode keyCode, int[] makeCode, String character, boolean shiftDown, boolean ctrlDown,
 		boolean altDown, boolean altGraphDown, boolean osDown, boolean typematic) {
 
-		if (this.targetNode == null) {
+		if (this.targetNode === null) {
 			return
 		}
 
 		val jfxCode = keyCode.toJfxKeyCode
 
-		if (jfxCode == null) {
+		if (jfxCode === null) {
 			return
 		}
 
@@ -139,8 +139,8 @@ class OskFxNodeConnectorImpl implements VirtualKeyboardIOHandler.Listener, OskFx
 		target => [
 			requestFocus
 			if (it instanceof TextInputControl) {
-				if(this.targetTextListener != null) textProperty.addListener = this.targetTextListener
-				if(this.targetSelectionListener != null) selectionProperty.addListener = this.targetSelectionListener
+				if(this.targetTextListener !== null) textProperty.addListener = this.targetTextListener
+				if(this.targetSelectionListener !== null) selectionProperty.addListener = this.targetSelectionListener
 				this.keyboard?.setIndicatorText(text)
 				this.keyboard?.requestInputIndicatorFocus
 				Platform.runLater [
@@ -153,8 +153,8 @@ class OskFxNodeConnectorImpl implements VirtualKeyboardIOHandler.Listener, OskFx
 	override void detach() {
 
 		if (targetNode instanceof TextInputControl) {
-			if(this.targetTextListener != null) targetNode.textProperty.removeListener = this.targetTextListener
-			if(this.targetSelectionListener != null) targetNode.selectionProperty.removeListener = this.
+			if(this.targetTextListener !== null) targetNode.textProperty.removeListener = this.targetTextListener
+			if(this.targetSelectionListener !== null) targetNode.selectionProperty.removeListener = this.
 				targetSelectionListener
 		}
 
@@ -164,7 +164,7 @@ class OskFxNodeConnectorImpl implements VirtualKeyboardIOHandler.Listener, OskFx
 	}
 
 	def isAttached() {
-		targetScene != null || targetNode != null
+		targetScene !== null || targetNode !== null
 	}
 
 	override enter() {

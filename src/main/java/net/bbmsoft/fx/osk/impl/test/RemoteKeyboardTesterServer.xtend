@@ -42,7 +42,7 @@ class RemoteKeyboardTesterServer extends BorderPane {
 
 	def initBoard() {
 
-		if (boardLayout != null) {
+		if (boardLayout !== null) {
 
 			try {
 

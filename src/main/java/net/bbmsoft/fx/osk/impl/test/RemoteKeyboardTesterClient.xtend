@@ -26,7 +26,7 @@ class RemoteKeyboardTesterClient extends BorderPane {
 
 	private def initBoard(URL keyLayout) {
 
-		if (keyLayout != null) {
+		if (keyLayout !== null) {
 
 			try {
 

@@ -35,7 +35,7 @@ class SimpleKeyMap implements KeyMap {
 
 	override isLetter(KeyCode keyCode) {
 		val binding = this.keyBindings.get(keyCode)
-		binding != null && binding.isLetter
+		binding !== null && binding.isLetter
 	}
 
 	def add(KeyBinding keyBinding) {
