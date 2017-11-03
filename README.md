@@ -1,4 +1,4 @@
-# BBMSoft Virtual-Keyboard
+# BBMSoft OSK-FX
 
 [![Build Status](https://travis-ci.org/babymotte/osk-fx.svg?branch=develop)](https://travis-ci.org/babymotte/osk-fx)
 
