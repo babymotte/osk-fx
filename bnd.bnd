@@ -1,0 +1,13 @@
+src: \
+	src/main/java,\
+	src/main/resources,\
+	target/src-gen/main/xtend
+
+bin: target/classes
+Export-Package: net.bbmsoft.fx.osk
+Private-Package: \
+	net.bbmsoft.fx.osk.impl,\
+	net.bbmsoft.fx.osk.impl.components,\
+	net.bbmsoft.fx.osk.impl.components.skin,\
+	net.bbmsoft.fx.osk.impl.layout,\
+	net.bbmsoft.fx.osk.impl.test
